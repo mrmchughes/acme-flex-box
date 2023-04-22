@@ -1,48 +1,144 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-  
+
 body {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: white;
-    color: darkgray;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: gray;
 }
-  
+
 p {
-    color: #252525;
-    line-height: 1.5em;
+  color: #252525;
+  line-height: 1.5em;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    margin: 0 2em;
-    width: calc(100% - 4em);
-    background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightskyblue;
 }
 
 header > p {
-    width: 25%;
-    height: 50%;
-    justify-items: center;
-    margin-left: 1rem;
+  width: 25%;
+  height: 50%;
+  justify-items: center;
+  margin-left: 1rem;
+  color: white;
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 nav > a {
-    color: black;
-    text-decoration: none;
-    margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
 }
 
 #usersA {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+h2 {
+  align-self: left;
+  margin-left: 5px;
+}
+
+form {
+  border: black solid;
+  border-radius: 5px;
+  padding: 15px;
+  align-self: center;
+  align-items: left;
+  margin-left: 12em;
+  margin-right: 12em;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.form-div input {
+  width: 75%;
+}
+
+.form-div select {
+  width: 75%;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+
+#save {
+  background-color: blue;
+  color: white;
+  border: black;
+}
+
+.userDivContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userDiv {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 2em;
+  width: calc(33% - 4em);
+}
+
+.userText {
+  width: calc(100% - 5em);
+  margin-left: 2.5em;
+  text-align: center;
+}
+
+.userName {
+  text-align: center;
+  font-size: 1em;
+}
+
+@media (min-width: 300px) {
+  .userDiv {
+    width: calc(100% - 4em);
+  }
+
+  form {
+    margin: 0;
+  }
+
+  .form-div {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form-div input {
+    width: 100%;
+  }
+
+  .form-div select {
+    width: 100%;
+  }
+
+  .button-div {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 600px) {
+  .userDiv {
+    width: calc(50% - 4em);
+  }
 }
